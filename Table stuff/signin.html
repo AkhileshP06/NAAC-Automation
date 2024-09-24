@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Campus Authentication</h1>
+        <form id="signin-form">
+            <h2 id="campus-name"></h2> <!-- Campus name will be set here -->
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">Sign In</button>
+            <p class="message"></p>
+        </form>
+        <div id="branch-selection" class="hidden">
+            <h2>Select Your Branch</h2>
+            <select id="branch">
+                <option value="AIE">AIE</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+            </select>
+            <button id="branch-auth-btn">Authenticate Branch</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.sheetjs.com/xlsx-0.18.5/package/dist/xlsx.full.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAAC Criteria Portal</title>
+    <link rel="stylesheet" href="dashboard_styles.css">
+</head>
+<body>
+    <div class="dashboard-container" id="primary_bangalore">
+        <h1>NAAC Criteria Upload</h1>
+
+        <!-- NAAC Criteria Dropdown -->
+        <form id="naac-form">
+            <div class="form-group">
+                <label for="naacCriteria">Select NAAC Criteria:</label>
+                <select id="naacCriteria" required>
+                    <option value="">--Select--</option>
+                    <option value="1.1.1_1.2.2">1.1.1 and 1.2.2</option>
+                    <option value="1.1.3_1.2.1">1.1.3 and 1.2.1</option>
+                    <option value="1.3.2_1.3.3">1.3.2 and 1.3.3</option>
+                    <option value="1.3.4">1.3.4</option>
+                </select>
+            </div>
+
+            <!-- Excel Upload -->
+            <div class="form-group">
+                <label for="excelFile">Upload Excel File:</label>
+                <input type="file" id="excelFile" accept=".xlsx, .xls" required>
+            </div>
+
+            <!-- Confirm Button -->
+            <button type="submit" id="confirmButton">Confirm</button>
+
+            <!-- Save Progress and Submit Buttons -->
+            <button type="button" id="saveProgressButton">Save Progress</button>
+            <button type="submit" id="submitButton" disabled>Submit</button>
+        </form>
+
+        <!-- Table to Display Excel Data -->
+        <h2>Uploaded Excel Data</h2>
+        <table id="excelTable">
+            <thead>
+                <tr id="tableHead">
+                    <!-- Table headers will be dynamically created -->
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Table data will be dynamically created -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="dashboard_bangalore_AIE_script.js"></script>
+</body>
+</html>
